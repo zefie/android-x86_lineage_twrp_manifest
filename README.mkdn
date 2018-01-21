@@ -1,10 +1,10 @@
 ## Getting Started ##
 ---------------
 
-To get started with LineageOS sources to build TWRP, you'll need to get
+To get started with LineageOS sources to build TWRP for Android-x86, you'll need to get
 familiar with [Git and Repo](http://source.android.com/download/using-repo).
 
-To initialize your local repository using the LineageOS trees to build TWRP, use a command like this:
+To initialize your local repository using the LineageOS, android-x86, and zefie trees to build TWRP for Android-x86, use a command like this:
 
     repo init -u https://github.com/zefie/android-x86_lineage_twrp_manifest.git -b twrp-14.1
 
@@ -14,4 +14,16 @@ Then to sync up:
 
 Then to build:
 
-     cd <source-dir>; . build/envsetup.sh; lunch android_x86-eng; make recoveryimage
+    . build/envsetup.sh
+    lunch android_x86-eng (for 32bit, OR android_x86_64-eng for 64-bit)
+    make recoveryimage
+    make iso_img
+
+After the build, your iso will be in:
+
+* 32-bit build: out/target/product/x86/android_x86.iso
+* 64-bit build: out/target/product/x86_64/android_x86_64.iso
+
+This build is intended to be a TWRP standalone, booted to work with an existing Android-x86 HDD or USB installation.
+
+You cannot run, nor install Android-x86 with this build.
