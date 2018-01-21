@@ -31,8 +31,8 @@
 <!--	<project path="kernel" name="kernel/common" remote="x86" revision="kernel-4.9" /> -->
 	<project path="bionic" name="platform/bionic" groups="pdk" remote="x86" />
 	<project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" remote="aosp" revision="d4f287145feb677e99f0bf30fa6a0e14bd79f896" />
-	<project path="device/generic/common" name="device/generic/common" groups="pdk" remote="x86" />
 	<project path="device/generic/firmware" name="device/generic/firmware" remote="x86" />
+	<project path="device/generic/x86" name="device/generic/x86" groups="pdk" remote="x86" />
 	<project path="device/generic/x86_64" name="device/generic/x86_64" groups="pdk" remote="x86" />
 	<project path="external/busybox" name="platform/external/busybox" remote="x86" />
 	<project path="frameworks/native" name="platform/frameworks/native" groups="pdk" remote="x86" />
@@ -70,7 +70,7 @@
 	<!-- zefie custom twrp build overrides -->
 	<remove-project name="omnirom/android_bootable_recovery" />
 	<project path="bootable/recovery" name="zefie/android_bootable_recovery_x86target" remote="github" revision="drm-fix" groups="pdk-cw-fs"/>
-	<project path="device/generic/x86" name="zefie/android-x86_device_generic_x86" remote="github" revision="nougat-x86" groups="pdk" />
+	<project path="device/generic/common" name="zefie/android-x86_device_generic_common" remote="github" revision="nougat-x86" groups="pdk" />
 	<project path="kernel" name="zefie/android-x86_kernel_4.9" remote="github" revision="kernel-4.9" clone-depth="1" />
 	<project path="bootable/newinstaller" name="zefie/android-x86_installer" remote="github" revision="nougat-x86" />
 	<project path="build" name="zefie/android-x86_platform_build" groups="pdk,tradefed" remote="github" revision="nougat-x86" >
