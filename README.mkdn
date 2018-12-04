@@ -27,3 +27,5 @@ After the build, your iso will be in:
 This build is intended to be a TWRP standalone, booted to work with an existing Android-x86 HDD or USB installation.
 
 You cannot run, nor install Android-x86 with this build.
+
+If you get `genisoimage: option '-e' is ambiguous; possibilities: '--eltorito-boot' '--exchange' '--ethershare' '--exclude-list' '--exclude' '--eltorito-catalog' '--eltorito-alt-boot'` cherry-pick: https://github.com/BlissRoms-x86/bootable_newinstaller/commit/e41b22c868f945a4c0e096b2cb50281d9d3865c0 in bootable/newinstaller (you will need to have xorriso installed)
